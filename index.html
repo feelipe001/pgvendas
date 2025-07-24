@@ -922,11 +922,11 @@ function getFormattedDate() {
     return new Date().toLocaleDateString('pt-BR', options);
 }
 
-// Função para pegar a cidade do usuário (via IP)
-fetch('https://ipapi.co/json/')
+// Busca a localização usando ipwhois (grátis e sem chave)
+fetch("https://ipwhois.app/json/")
   .then(response => response.json())
   .then(data => {
-    const city = data.city;
+    const city = data.city || "sua cidade";
     const date = getFormattedDate();
     document.getElementById('top-bar').textContent = `Você está em ${city} - Hoje é ${date}`;
   })
