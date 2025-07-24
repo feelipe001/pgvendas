@@ -189,6 +189,12 @@
 nav {
     margin-top: calc(8px + 30px); /* padding + altura aproximada */
 }
+        nav {
+    transition: top 0.3s ease-in-out;
+}
+nav.hidden {
+    top: -100px; /* empurra para fora da tela */
+}
     </style>
 </head>
 <body>
@@ -955,6 +961,20 @@ fetch("https://ipwhois.app/json/")
     topBar.textContent = `Hoje é ${date}`;
     topBar.classList.add('show'); // Ativa o fade-in
   });
+</script>
+    <script>
+    let lastScroll = 0;
+    const nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll) {
+            nav.classList.add("hidden"); // rolando para baixo -> esconde
+        } else {
+            nav.classList.remove("hidden"); // rolando para cima -> mostra
+        }
+        lastScroll = currentScroll;
+    });
 </script>
 </body>
 </html>
