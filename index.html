@@ -168,10 +168,16 @@
         margin-bottom: 10px !important;
     }
 }
+        #top-bar {
+    background-color: #00FF66; /* Verde da paleta */
+}
 
     </style>
 </head>
 <body>
+    <div id="top-bar" class="w-full text-center text-black py-2 text-sm font-medium">
+  Carregando localização e data...
+</div>
     <!-- Navigation -->
     <nav class="fixed w-full bg-[#0A0A1A]/90 backdrop-blur-md z-50 py-4 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -908,6 +914,26 @@
   // Atualiza a cada segundo
   updateCountdown();
   let timer = setInterval(updateCountdown, 1000);
+</script>
+    <script>
+// Função para pegar a data formatada
+function getFormattedDate() {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date().toLocaleDateString('pt-BR', options);
+}
+
+// Função para pegar a cidade do usuário (via IP)
+fetch('https://ipapi.co/json/')
+  .then(response => response.json())
+  .then(data => {
+    const city = data.city;
+    const date = getFormattedDate();
+    document.getElementById('top-bar').textContent = `Você está em ${city} - Hoje é ${date}`;
+  })
+  .catch(() => {
+    const date = getFormattedDate();
+    document.getElementById('top-bar').textContent = `Hoje é ${date}`;
+  });
 </script>
 </body>
 </html>
