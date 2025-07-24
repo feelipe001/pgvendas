@@ -123,30 +123,30 @@
         }
         /* Centralizar tudo no mobile */
 @media (max-width: 768px) {
+    /* Centraliza textos */
     body, h1, h2, h3, h4, p {
         text-align: center !important;
     }
 
-    /* Centralizar seções e grids */
-    section, .max-w-7xl, .max-w-4xl, .grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Centralizar ícones/font-awesome */
+    /* Centraliza ícones/font-awesome */
     i, svg {
         margin: 0 auto;
         display: block;
     }
 
-    /* Botões centralizados */
+    /* Botões */
     button {
         display: block;
         margin: 20px auto;
     }
+
+    /* Mantém grid normal, mas centraliza os itens internos */
+    .grid > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
     </style>
 </head>
 <body>
