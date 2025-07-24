@@ -537,7 +537,7 @@
         <div class="max-w-4xl mx-auto text-center">
             <div class="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    <span class="neon-text">De R$297</span> por apenas <span class="neon-text">R$97</span>
+                    <span class="neon-text">De R$297</span> por apenas <span class="neon-text">R$77</span>
                 </h2>
                 <p class="text-xl text-[#B3B3B3] mb-8">
                     (acesso vitalício e atualizações gratuitas)
@@ -606,10 +606,10 @@
                     </div>
                     <div class="lg:w-2/3 lg:pl-12">
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                            <span class="neon-text">Sou Carlos Silva</span>, especialista em criação de conteúdo e crescimento orgânico.
+                            <span class="neon-text">Sou Felipe</span>, especialista em criação de conteúdo e crescimento orgânico.
                         </h2>
                         <p class="text-[#B3B3B3] mb-6 text-lg">
-                            Com mais de 8 anos de experiência no digital, já ajudei centenas de criadores a destravarem seus perfis e alcançarem resultados reais no Instagram.
+                            Com mais de 10 anos de experiência no digital, já ajudei centenas de criadores a destravarem seus perfis e alcançarem resultados reais no Instagram.
                         </p>
                         <p class="text-[#B3B3B3] mb-6 text-lg">
                             Minha missão é descomplicar o crescimento orgânico e mostrar que com as estratégias certas, qualquer pessoa pode construir uma audiência engajada.
@@ -879,5 +879,35 @@
             });
         });
     </script>
+    <script>
+  // Tempo inicial: 14 minutos e 33 segundos
+  let totalSeconds = (14 * 60) + 33;
+
+  function updateCountdown() {
+    // Calcula dias, horas, minutos e segundos
+    let days = Math.floor(totalSeconds / (24 * 60 * 60));
+    let hours = Math.floor((totalSeconds % (24 * 60 * 60)) / 3600);
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+    let seconds = totalSeconds % 60;
+
+    // Atualiza no HTML
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+    // Conta regressiva
+    if (totalSeconds > 0) {
+      totalSeconds--;
+    } else {
+      clearInterval(timer);
+      document.getElementById('countdown').innerHTML = "<div class='text-red-500 text-2xl'>Tempo esgotado!</div>";
+    }
+  }
+
+  // Atualiza a cada segundo
+  updateCountdown();
+  let timer = setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
