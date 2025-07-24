@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engaja+ – O Método para Criar Reels que Viralizam e Conquistam Seguidores</title>
+    <meta name="description" content="Aprenda a criar Reels que viralizam e aumentam seu engajamento com o método Engaja+. Acesse agora com desconto especial!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-green: #00FF66;
+            --dark-blue: #0A0A1A;
+            --electric-purple: #7B3FE4;
+            --light-gray: #B3B3B3;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-blue);
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .neon-text {
+            color: var(--neon-green);
+        }
+        
+        .neon-border {
+            border-color: var(--neon-green);
+        }
+        
+        .neon-bg {
+            background-color: var(--neon-green);
+        }
+        
+        .purple-bg {
+            background-color: var(--electric-purple);
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 255, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 102, 0);
+            }
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .flip-card {
+            perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+        
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        
+        .testimonial-slide {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .guarantee-badge {
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#0A0A1A]/90 backdrop-blur-md z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold neon-text">Engaja<span class="text-white">+</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problema" class="text-white hover:text-[#00FF66] transition">O Problema</a>
+                <a href="#solucao" class="text-white hover:text-[#00FF66] transition">A Solução</a>
+                <a href="#conteudo" class="text-white hover:text-[#00FF66] transition">Conteúdo</a>
+                <a href="#depoimentos" class="text-white hover:text-[#00FF66] transition">Depoimentos</a>
+                <a href="#oferta" class="text-white hover:text-[#00FF66] transition">Oferta</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0A0A1A] absolute left-0 right-0 top-full px-6 py-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#problema" class="text-white hover:text-[#00FF66] transition">O Problema</a>
+                <a href="#solucao" class="text-white hover:text-[#00FF66] transition">A Solução</a>
+                <a href="#conteudo" class="text-white hover:text-[#00FF66] transition">Conteúdo</a>
+                <a href="#depoimentos" class="text-white hover:text-[#00FF66] transition">Depoimentos</a>
+                <a href="#oferta" class="text-white hover:text-[#00FF66] transition">Oferta</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0A0A1A] to-[#1A1A2E]">
+        <div class="max-w-7xl mx-auto fade-up">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="neon-text">Quer transformar seu Instagram</span> em uma máquina de engajamento?
+                    </h1>
+                    <p class="text-xl text-[#B3B3B3] mb-8">
+                        Com o Engaja+, você aprende passo a passo como criar Reels que viralizam e conquistam seguidores reais.
+                    </p>
+                    <button class="neon-bg text-[#0A0A1A] font-bold py-4 px-8 rounded-full hover-glow pulse transform hover:scale-105 transition duration-300">
+                        QUERO COMEÇAR AGORA
+                    </button>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                         alt="Mentor Engaja+" 
+                         class="rounded-2xl w-full max-w-lg mx-auto border-2 border-[#7B3FE4] shadow-lg">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-[#7B3FE4] rounded-full opacity-30 animate-pulse"></div>
+                    <div class="absolute -bottom-6 -right-6 w-20 h-20 bg-[#00FF66] rounded-full opacity-30 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problema" class="py-20 px-6 bg-[#1A1A2E]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <span class="neon-text">Postar todos os dias</span> e não ter resultados é frustrante…
+                </h2>
+                <p class="text-xl text-[#B3B3B3] mb-12 text-center max-w-4xl mx-auto">
+                    Você já tentou de tudo: postou com frequência, usou hashtags da moda, copiou formatos de outros criadores… e mesmo assim, nada de engajamento.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="bg-[#0A0A1A] p-8 rounded-xl border border-[#7B3FE4]/30 hover:border-[#00FF66] transition group">
+                        <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#00FF66]/20 transition">
+                            <i class="fas fa-eye-slash text-2xl text-[#7B3FE4] group-hover:text-[#00FF66] transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Seus Reels não passam de algumas centenas de visualizações</h3>
+                        <p class="text-[#B3B3B3]">Você se esforça mas parece que o algoritmo simplesmente ignora seu conteúdo.</p>
+                    </div>
+                    
+                    <div class="bg-[#0A0A1A] p-8 rounded-xl border border-[#7B3FE4]/30 hover:border-[#00FF66] transition group">
+                        <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#00FF66]/20 transition">
+                            <i class="fas fa-clock text-2xl text-[#7B3FE4] group-hover:text-[#00FF66] transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Não sabe como chamar atenção nos primeiros segundos</h3>
+                        <p class="text-[#B3B3B3]">Seus vídeos não retêm a atenção do público e o scroll continua.</p>
+                    </div>
+                    
+                    <div class="bg-[#0A0A1A] p-8 rounded-xl border border-[#7B3FE4]/30 hover:border-[#00FF66] transition group">
+                        <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#00FF66]/20 transition">
+                            <i class="fas fa-random text-2xl text-[#7B3FE4] group-hover:text-[#00FF66] transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Se sente perdido com as constantes mudanças do algoritmo</h3>
+                        <p class="text-[#B3B3B3]">Quando você acha que entendeu, tudo muda e você volta à estaca zero.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <button class="neon-bg text-[#0A0A1A] font-bold py-4 px-8 rounded-full hover-glow transform hover:scale-105 transition duration-300">
+                        QUERO MUDAR ISSO AGORA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solucao" class="py-20 px-6 bg-[#0A0A1A]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
+                    <span class="neon-text">Existe um método que funciona</span> e vai mudar o seu jogo no Instagram.
+                </h2>
+                <p class="text-xl text-[#B3B3B3] mb-12 text-center max-w-4xl mx-auto">
+                    O Engaja+ foi criado para ajudar você a criar Reels que não só alcançam, mas prendem a atenção e fazem seu perfil crescer todos os dias.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mt-16">
+                    <div class="bg-gradient-to-br from-[#0A0A1A] to-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30 hover:glow transition transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-[#00FF66]/20 rounded-full flex items-center justify-center mb-6 neon-border border">
+                            <i class="fas fa-brain text-2xl neon-text"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Entenda o algoritmo e use a seu favor</h3>
+                        <p class="text-[#B3B3B3]">Aprenda como o Instagram realmente funciona e como fazer ele trabalhar para você.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-[#0A0A1A] to-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30 hover:glow transition transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-[#00FF66]/20 rounded-full flex items-center justify-center mb-6 neon-border border">
+                            <i class="fas fa-clone text-2xl neon-text"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Templates prontos para acelerar sua produção</h3>
+                        <p class="text-[#B3B3B3]">Modelos testados e aprovados que você pode usar imediatamente.</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-[#0A0A1A] to-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30 hover:glow transition transform hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-[#00FF66]/20 rounded-full flex items-center justify-center mb-6 neon-border border">
+                            <i class="fas fa-chart-line text-2xl neon-text"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Estratégias atuais que realmente funcionam</h3>
+                        <p class="text-[#B3B3B3]">Técnicas atualizadas para 2025 que vão fazer seu perfil decolar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="conteudo" class="py-20 px-6 bg-[#1A1A2E]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <span class="neon-text">Tudo que você precisa</span> para criar Reels que explodem em alcance:
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <!-- Module 1 -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-book text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Módulo 1: Fundamentos do Engajamento</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Psicologia do engajamento</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> O que faz um conteúdo viral</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Erros comuns que matam seu alcance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 2 -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-lock-open text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Módulo 2: Segredos do Algoritmo em 2025</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Como o algoritmo classifica seu conteúdo</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Sinais de engajamento que importam</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Como "hackear" o sistema</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 3 -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-heart text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Módulo 3: Criando Conteúdo que Conecta</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Storytelling para Reels</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Como prender atenção nos primeiros 3s</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Formatos que funcionam sempre</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 4 -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-mobile-alt text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Módulo 4: Edição Prática com Celular</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Apps essenciais para edição</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Fluxo de trabalho rápido</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Efeitos que aumentam retenção</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 5 -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-magic text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Módulo 5: Templates e Hacks Exclusivos</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Templates prontos para copiar</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Hacks de crescimento acelerado</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Estratégias de nicho</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bonus -->
+                    <div class="flip-card h-64">
+                        <div class="flip-card-inner h-full">
+                            <div class="flip-card-front bg-[#0A0A1A] rounded-xl p-6 border border-[#7B3FE4]/30 flex flex-col justify-center items-center h-full">
+                                <div class="w-16 h-16 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center mb-6">
+                                    <i class="fas fa-users text-2xl text-[#7B3FE4]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-center">Bônus: Grupo de Networking com criadores</h3>
+                            </div>
+                            <div class="flip-card-back bg-gradient-to-br from-[#7B3FE4] to-[#0A0A1A] rounded-xl p-6 flex flex-col justify-center items-center h-full">
+                                <ul class="text-sm space-y-2">
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Acesso a comunidade exclusiva</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Feedback de especialistas</li>
+                                    <li><i class="fas fa-check neon-text mr-2"></i> Parcerias e colaborações</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-20 px-6 bg-[#0A0A1A]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <span class="neon-text">Mais de 2.000 alunos</span> já aplicaram as estratégias do Engaja+ e transformaram seu Instagram.
+                </h2>
+                
+                <div class="relative mt-16 overflow-hidden">
+                    <div id="testimonial-slider" class="flex transition-transform duration-500">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana C." class="w-16 h-16 rounded-full border-2 border-[#00FF66]">
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Ana C.</h4>
+                                        <p class="text-sm text-[#B3B3B3]">@anacreator</p>
+                                    </div>
+                                </div>
+                                <p class="text-[#B3B3B3] mb-4">
+                                    "Em 3 semanas aplicando o método, meu alcance aumentou 5x! Finalmente entendi como criar conteúdo que o Instagram valoriza."
+                                </p>
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pedro M." class="w-16 h-16 rounded-full border-2 border-[#00FF66]">
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Pedro M.</h4>
+                                        <p class="text-sm text-[#B3B3B3]">@pedromarketing</p>
+                                    </div>
+                                </div>
+                                <p class="text-[#B3B3B3] mb-4">
+                                    "Os templates prontos me salvaram! Agora consigo produzir conteúdo de qualidade em metade do tempo e com muito mais resultados."
+                                </p>
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-[#1A1A2E] p-8 rounded-xl border border-[#7B3FE4]/30">
+                                <div class="flex items-center mb-6">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Juliana S." class="w-16 h-16 rounded-full border-2 border-[#00FF66]">
+                                    <div class="ml-4">
+                                        <h4 class="font-bold">Juliana S.</h4>
+                                        <p class="text-sm text-[#B3B3B3]">@julianasempre</p>
+                                    </div>
+                                </div>
+                                <p class="text-[#B3B3B3] mb-4">
+                                    "Depois de 1 ano tentando crescer sozinha, em 2 meses com o Engaja+ consegui meus primeiros 10k seguidores. Valeu cada centavo!"
+                                </p>
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center mt-8 space-x-2">
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-[#7B3FE4] focus:outline-none" data-index="0"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-[#7B3FE4]/30 focus:outline-none" data-index="1"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-[#7B3FE4]/30 focus:outline-none" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="oferta" class="py-20 px-6 bg-gradient-to-b from-[#1A1A2E] to-[#0A0A1A]">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="neon-text">De R$297</span> por apenas <span class="neon-text">R$97</span>
+                </h2>
+                <p class="text-xl text-[#B3B3B3] mb-8">
+                    (acesso vitalício e atualizações gratuitas)
+                </p>
+                
+                <div class="bg-[#0A0A1A] p-8 rounded-xl border border-[#7B3FE4]/30 mb-12">
+                    <h3 class="text-2xl font-bold mb-6 neon-text">Últimas vagas com preço promocional</h3>
+                    <div id="countdown" class="flex justify-center space-x-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold neon-text" id="days">00</div>
+                            <div class="text-sm text-[#B3B3B3]">Dias</div>
+                        </div>
+                        <div class="text-4xl font-bold neon-text">:</div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold neon-text" id="hours">00</div>
+                            <div class="text-sm text-[#B3B3B3]">Horas</div>
+                        </div>
+                        <div class="text-4xl font-bold neon-text">:</div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold neon-text" id="minutes">00</div>
+                            <div class="text-sm text-[#B3B3B3]">Minutos</div>
+                        </div>
+                        <div class="text-4xl font-bold neon-text">:</div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold neon-text" id="seconds">00</div>
+                            <div class="text-sm text-[#B3B3B3]">Segundos</div>
+                        </div>
+                    </div>
+                    <p class="text-[#B3B3B3]">Essa oferta expira em breve!</p>
+                </div>
+                
+                <button class="neon-bg text-[#0A0A1A] font-bold py-4 px-12 rounded-full hover-glow pulse transform hover:scale-105 transition duration-300 text-xl mb-12">
+                    QUERO GARANTIR MEU ACESSO
+                </button>
+                
+                <div class="flex flex-col items-center">
+                    <div class="relative w-24 h-24 mb-6 guarantee-badge">
+                        <div class="absolute inset-0 bg-[#00FF66] rounded-full opacity-20"></div>
+                        <div class="absolute inset-2 bg-[#0A0A1A] rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-3xl neon-text"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Garantia 7 Dias</h3>
+                    <p class="text-[#B3B3B3] max-w-md mx-auto">
+                        "Testou e não gostou? Devolvemos 100% do seu investimento sem burocracia."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-6 bg-[#0A0A1A]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-up">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/3 mb-12 lg:mb-0 flex justify-center">
+                        <div class="relative group">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Mentor" 
+                                 class="rounded-full w-48 h-48 object-cover border-4 border-[#7B3FE4] shadow-lg group-hover:border-[#00FF66] transition duration-300 transform group-hover:scale-105">
+                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-[#00FF66] rounded-full flex items-center justify-center group-hover:rotate-12 transition duration-300">
+                                <i class="fas fa-check text-2xl text-[#0A0A1A]"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 lg:pl-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                            <span class="neon-text">Sou Carlos Silva</span>, especialista em criação de conteúdo e crescimento orgânico.
+                        </h2>
+                        <p class="text-[#B3B3B3] mb-6 text-lg">
+                            Com mais de 8 anos de experiência no digital, já ajudei centenas de criadores a destravarem seus perfis e alcançarem resultados reais no Instagram.
+                        </p>
+                        <p class="text-[#B3B3B3] mb-6 text-lg">
+                            Minha missão é descomplicar o crescimento orgânico e mostrar que com as estratégias certas, qualquer pessoa pode construir uma audiência engajada.
+                        </p>
+                        <div class="flex space-x-4">
+                            <div class="bg-[#7B3FE4]/20 p-4 rounded-lg">
+                                <p class="text-2xl font-bold neon-text">250k+</p>
+                                <p class="text-sm text-[#B3B3B3]">Seguidores</p>
+                            </div>
+                            <div class="bg-[#7B3FE4]/20 p-4 rounded-lg">
+                                <p class="text-2xl font-bold neon-text">10M+</p>
+                                <p class="text-sm text-[#B3B3B3]">Visualizações</p>
+                            </div>
+                            <div class="bg-[#7B3FE4]/20 p-4 rounded-lg">
+                                <p class="text-2xl font-bold neon-text">2k+</p>
+                                <p class="text-sm text-[#B3B3B3]">Alunos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 bg-[#1A1A2E]">
+        <div class="max-w-4xl mx-auto">
+            <div class="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <span class="neon-text">Perguntas</span> Frequentes
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-[#7B3FE4]/30 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full text-left p-6 bg-[#0A0A1A] hover:bg-[#0A0A1A]/80 transition flex justify-between items-center">
+                            <span class="font-bold">Como acesso o curso?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content bg-[#0A0A1A]/50">
+                            <div class="p-6 text-[#B3B3B3]">
+                                Imediatamente após a confirmação do pagamento, você receberá um e-mail com acesso à área de membros. Lá você encontrará todos os módulos disponíveis para assistir quando e onde quiser.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-[#7B3FE4]/30 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full text-left p-6 bg-[#0A0A1A] hover:bg-[#0A0A1A]/80 transition flex justify-between items-center">
+                            <span class="font-bold">É para iniciantes ou avançados?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content bg-[#0A0A1A]/50">
+                            <div class="p-6 text-[#B3B3B3]">
+                                O curso foi projetado para funcionar tanto para iniciantes que estão começando do zero, quanto para criadores mais experientes que querem aprimorar suas estratégias. Cada módulo é dividido em níveis para que você possa aproveitar ao máximo de acordo com seu conhecimento atual.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-[#7B3FE4]/30 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full text-left p-6 bg-[#0A0A1A] hover:bg-[#0A0A1A]/80 transition flex justify-between items-center">
+                            <span class="font-bold">Preciso de equipamentos caros?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content bg-[#0A0A1A]/50">
+                            <div class="p-6 text-[#B3B3B3]">
+                                Não! Todo o conteúdo foi pensado para ser produzido apenas com um smartphone. Vamos te ensinar como criar vídeos profissionais usando apenas aplicativos gratuitos e o que você já tem em mãos.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-[#7B3FE4]/30 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full text-left p-6 bg-[#0A0A1A] hover:bg-[#0A0A1A]/80 transition flex justify-between items-center">
+                            <span class="font-bold">Em quanto tempo verei resultados?</span>
+                            <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content bg-[#0A0A1A]/50">
+                            <div class="p-6 text-[#B3B3B3]">
+                                Os resultados variam de acordo com a aplicação, mas a maioria dos alunos começa a ver melhorias significativas no alcance e engajamento dentro de 2 a 4 semanas após aplicar as estratégias. Quanto mais consistente você for, mais rápido virão os resultados!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-[#0A0A1A] border-t border-[#7B3FE4]/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-2xl font-bold neon-text">Engaja<span class="text-white">+</span></span>
+                    <p class="text-[#B3B3B3] mt-2">Transforme seu Instagram em uma máquina de engajamento</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0">
+                    <div>
+                        <h4 class="font-bold mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-[#B3B3B3] hover:text-[#00FF66] transition">Termos de Uso</a></li>
+                            <li><a href="#" class="text-[#B3B3B3] hover:text-[#00FF66] transition">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-[#B3B3B3] hover:text-[#00FF66] transition">Suporte</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center text-[#B3B3B3] hover:text-[#00FF66] hover:bg-[#00FF66]/20 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center text-[#B3B3B3] hover:text-[#00FF66] hover:bg-[#00FF66]/20 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-[#7B3FE4]/20 rounded-full flex items-center justify-center text-[#B3B3B3] hover:text-[#00FF66] hover:bg-[#00FF66]/20 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-[#7B3FE4]/30 mt-12 pt-8 text-center text-[#B3B3B3]">
+                <p>© 2025 Engaja+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Scroll reveal animation
+        const fadeElements = document.querySelectorAll('.fade-up');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const slider = document.getElementById('testimonial-slider');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.style.opacity = '1';
+                } else {
+                    testimonial.style.opacity = '0';
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-[#7B3FE4]/30');
+                    dot.classList.add('bg-[#7B3FE4]');
+                } else {
+                    dot.classList.remove('bg-[#7B3FE4]');
+                    dot.classList.add('bg-[#7B3FE4]/30');
+                }
+            });
+            
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            currentTestimonial = index;
+        }
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                showTestimonial(index);
+            });
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 3); // 3 days from now
+            
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle the answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== this) {
+                        const otherAnswer = q.nextElementSibling;
+                        const otherIcon = q.querySelector('i');
+                        otherAnswer.style.maxHeight = null;
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
