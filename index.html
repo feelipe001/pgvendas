@@ -155,10 +155,17 @@
     }
 }
 @media (max-width: 768px) {
-    /* Centralizar os ícones (SVG e FontAwesome) */
+    /* Pega o container do ícone */
+    .grid > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Centraliza os ícones (SVG e FontAwesome) */
     .grid svg, .grid i {
-        display: block !important;
-        margin: 0 auto !important;
+        margin-bottom: 10px !important;
     }
 }
 
