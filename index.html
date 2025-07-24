@@ -177,14 +177,18 @@
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    position: fixed;     /* Mantém fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+    padding: 8px 0;
 }
+
 #top-bar.show {
     opacity: 1;
     transform: translateY(0);
-}
-        #top-bar {
-    height: auto;
-    padding: 8px 0;
 }
 nav {
     margin-top: calc(8px + 30px); /* padding + altura aproximada */
