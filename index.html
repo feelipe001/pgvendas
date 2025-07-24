@@ -189,9 +189,6 @@
 nav {
     margin-top: calc(8px + 30px); /* padding + altura aproximada */
 }
-        body {
-    padding-top: 70px; /* ajusta o espaço para que o conteúdo não fique escondido */
-}
     </style>
 </head>
 <body>
@@ -199,7 +196,35 @@ nav {
   Carregando localização e data...
 </div>
     <!-- Navigation -->
-    <nav style="display:none;"></nav>
+    <nav class="fixed w-full bg-[#0A0A1A]/90 backdrop-blur-md z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold neon-text">Engaja<span class="text-white">+</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problema" class="text-white hover:text-[#00FF66] transition">O Problema</a>
+                <a href="#solucao" class="text-white hover:text-[#00FF66] transition">A Solução</a>
+                <a href="#conteudo" class="text-white hover:text-[#00FF66] transition">Conteúdo</a>
+                <a href="#depoimentos" class="text-white hover:text-[#00FF66] transition">Depoimentos</a>
+                <a href="#oferta" class="text-white hover:text-[#00FF66] transition">Oferta</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0A0A1A] absolute left-0 right-0 top-full px-6 py-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#problema" class="text-white hover:text-[#00FF66] transition">O Problema</a>
+                <a href="#solucao" class="text-white hover:text-[#00FF66] transition">A Solução</a>
+                <a href="#conteudo" class="text-white hover:text-[#00FF66] transition">Conteúdo</a>
+                <a href="#depoimentos" class="text-white hover:text-[#00FF66] transition">Depoimentos</a>
+                <a href="#oferta" class="text-white hover:text-[#00FF66] transition">Oferta</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-[#0A0A1A] to-[#1A1A2E]">
