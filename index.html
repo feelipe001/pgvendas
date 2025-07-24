@@ -121,6 +121,34 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+        /* Centralização apenas no mobile */
+@media (max-width: 768px) {
+    body, h1, h2, h3, h4, p {
+        text-align: center !important;
+    }
+
+    section, .max-w-7xl, .max-w-4xl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button, .btn {
+        display: inline-block;
+        margin: 15px auto;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Centraliza blocos que estavam alinhados em grid */
+    .grid {
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
